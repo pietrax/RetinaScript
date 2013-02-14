@@ -1,0 +1,69 @@
+<!--
+	RetinaScript.js
+	Pietro Terranova
+	www.pietroterranova.com
+	14/02/2013
+	Version 0.1
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>retinaScript.js</title>
+	<style type="text/css">
+		body,html{
+			font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+		}
+		html{
+			background:url('bg.jpg') #fff;
+			box-shadow:0px 0px 25px rgba(0,0,0,0.3) inset;
+			height:100%;
+		}
+		.container{
+			width: 530px;
+			margin: 0 auto;
+		}
+		.box{
+			float: left;
+		}
+		.box img{
+			width: 256px;
+		}
+		h1,h2{
+			text-align: center;
+		}
+		a{
+			text-decoration: none;
+			color:black;
+		}
+		a:hover{
+			color:#ff6600;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<h1>Non Retina</h1>
+			<img src="image.png" alt="Immagine non Retina" />
+		</div>
+		<div class="box">
+			<h1>Retina</h1>
+			<img src="image.png" alt="Immagine Retina" class="retina" />
+		</div>
+		<h2><a href="http://www.pietroterranova.com">PietroTerranova.com</a></h2>
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">
+		<img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/us/88x31.png" />
+		</a>
+		<br />This work is licensed under a 
+		<a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.
+	</div>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="retinaScript.js"></script>
+	<script type="text/javascript">
+		$('img.retina').each(function() {
+            retinaScript($(this));
+        });
+	</script>
+</body>
+</html>
